@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="15G19009" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oOT-a4-dI4">
+                                <rect key="frame" x="13" y="30" width="350" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="PDl-XF-5Xt"/>
+                                    <constraint firstAttribute="width" constant="350" id="vKu-CR-C1P"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Y6F-Uk-ONU">
+                                <rect key="frame" x="20" y="85" width="335" height="35"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWn-e6-RZ3">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="VED-M5-dKQ"/>
+                                            <constraint firstAttribute="width" constant="150" id="zHi-2j-08K"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Rate" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jYl-YX-B4s">
+                                        <rect key="frame" x="185" y="0.0" width="150" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="ctf-Ht-SOE"/>
+                                            <constraint firstAttribute="height" constant="35" id="o4u-vU-J5y"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ExV-tW-bwJ">
+                                <rect key="frame" x="13" y="150" width="350" height="430"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="QqI-jG-Wjz"/>
+                                    <constraint firstAttribute="height" constant="430" id="o9K-OL-YUD"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="46w-6V-noa"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="lTn-ku-Vfz"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vb0-9k-rT2">
+                                <rect key="frame" x="36" y="620" width="303" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXf-12-Rg3">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="RsZ-fX-DPb"/>
+                                            <constraint firstAttribute="width" constant="80" id="anq-mP-anc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Insert"/>
+                                        <connections>
+                                            <action selector="InsertButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zKH-zX-XHR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUh-XK-68p">
+                                        <rect key="frame" x="111.5" y="0.0" width="80" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="dFt-wP-xmQ"/>
+                                            <constraint firstAttribute="height" constant="35" id="zX6-72-HxR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Update"/>
+                                        <connections>
+                                            <action selector="UpdateButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mmg-hx-Hba"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kr-BT-Sds">
+                                        <rect key="frame" x="223" y="0.0" width="80" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Upo-Xg-ObM"/>
+                                            <constraint firstAttribute="height" constant="35" id="hp7-e7-gOZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Delete"/>
+                                        <connections>
+                                            <action selector="DeleteButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MYU-Qv-Kig"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Y6F-Uk-ONU" secondAttribute="trailing" constant="20" id="6mF-ut-9ar"/>
+                            <constraint firstItem="ExV-tW-bwJ" firstAttribute="top" secondItem="Y6F-Uk-ONU" secondAttribute="bottom" constant="30" id="EkN-De-rRd"/>
+                            <constraint firstItem="Y6F-Uk-ONU" firstAttribute="top" secondItem="oOT-a4-dI4" secondAttribute="bottom" constant="20" id="H2t-gx-jSr"/>
+                            <constraint firstItem="Vb0-9k-rT2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="JhP-yg-GuS"/>
+                            <constraint firstItem="oOT-a4-dI4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="Oy7-Se-llO"/>
+                            <constraint firstItem="Vb0-9k-rT2" firstAttribute="top" secondItem="ExV-tW-bwJ" secondAttribute="bottom" constant="40" id="QVK-si-5ni"/>
+                            <constraint firstItem="oOT-a4-dI4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a86-T9-mTB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vb0-9k-rT2" secondAttribute="trailing" constant="20" id="oPR-SO-Blk"/>
+                            <constraint firstItem="Y6F-Uk-ONU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="sCo-82-a1Q"/>
+                            <constraint firstItem="ExV-tW-bwJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uo4-sh-is6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ItemNameTextField" destination="BWn-e6-RZ3" id="k3R-ze-2u6"/>
+                        <outlet property="ItemRateTextField" destination="jYl-YX-B4s" id="aTW-Fm-uea"/>
+                        <outlet property="SearchItemTextField" destination="oOT-a4-dI4" id="1xB-pp-TUP"/>
+                        <outlet property="myTableView" destination="ExV-tW-bwJ" id="idV-Xr-4tJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
